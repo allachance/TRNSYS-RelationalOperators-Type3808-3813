@@ -44,7 +44,7 @@ Custom set of TRNSYS Types that evaluate relational comparison between two input
 ## Usage
 
 1. Add the Component in TRNSYS Studio  
-   - Insert the desired logic gate into your simulation workspace: 
+   - Insert the desired operators into your simulation workspace: 
 
      - ```Type3808```: `==`  
      - ```Type3809```: `!=`  
