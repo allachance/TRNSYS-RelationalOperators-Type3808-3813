@@ -27,7 +27,7 @@ Subroutine Type3809
    Double Precision :: timestep, time
    Integer :: currentUnit, currentType
 
-   Double Precision :: input_x, input_y
+   Double Precision :: input_x, input_y, tolerance
    logical :: output_flag
 
    !------------------------------------------------------------------------------------
@@ -93,8 +93,9 @@ Subroutine Type3809
    !------------------------------------------------------------------------------------
    input_x = GetInputValue(1)
    input_y = GetInputValue(2)
+   tolerance = 1.0d-12
 
-   output_flag = input_x .NE. input_y
+   output_flag = abs(input_x - input_y) >= tolerance
 
    Call setOutputValue(1, MERGE(1.d0, 0.d0, output_flag)) ! 1 if True
 
